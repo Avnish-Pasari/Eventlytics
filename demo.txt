@@ -1,0 +1,198 @@
+csc343h=> \i runner.txt
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:1: NOTICE:  drop cascades to 31 other objects
+DETAIL:  drop cascades to table ticketschema.owner
+drop cascades to table ticketschema.venue
+drop cascades to table ticketschema.seats
+drop cascades to table ticketschema.concert
+drop cascades to table ticketschema.price
+drop cascades to table ticketschema.users
+drop cascades to table ticketschema.purchase
+drop cascades to table ticketschema.q1
+drop cascades to view ticketschema.total
+drop cascades to view ticketschema.sum_concert
+drop cascades to view ticketschema.zeroes
+drop cascades to view ticketschema.zero_total
+drop cascades to view ticketschema.unioned_total
+drop cascades to view ticketschema.all_seats
+drop cascades to view ticketschema.sold
+drop cascades to view ticketschema.sold_venue
+drop cascades to view ticketschema.zero_percentage
+drop cascades to table ticketschema.q2
+drop cascades to view ticketschema.owner_venue_count
+drop cascades to view ticketschema.zero_owners
+drop cascades to view ticketschema.zero_column
+drop cascades to view ticketschema.all_owners
+drop cascades to view ticketschema.owner_all_info
+drop cascades to table ticketschema.q3
+drop cascades to view ticketschema.mobilitytrue
+drop cascades to view ticketschema.mobilityall
+drop cascades to view ticketschema.percentage
+drop cascades to view ticketschema.nameandpercentage
+drop cascades to table ticketschema.q4
+drop cascades to view ticketschema.nameandquantity
+drop cascades to view ticketschema.nothighest
+DROP SCHEMA
+CREATE SCHEMA
+SET
+psql:schema.ddl:17: NOTICE:  table "owner" does not exist, skipping
+DROP TABLE
+psql:schema.ddl:18: NOTICE:  table "venue" does not exist, skipping
+DROP TABLE
+psql:schema.ddl:19: NOTICE:  table "seats" does not exist, skipping
+DROP TABLE
+psql:schema.ddl:20: NOTICE:  table "concert" does not exist, skipping
+DROP TABLE
+psql:schema.ddl:21: NOTICE:  table "price" does not exist, skipping
+DROP TABLE
+psql:schema.ddl:22: NOTICE:  table "users" does not exist, skipping
+DROP TABLE
+psql:schema.ddl:23: NOTICE:  table "purchase" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+SET
+INSERT 0 2
+INSERT 0 3
+INSERT 0 76
+INSERT 0 7
+INSERT 0 13
+INSERT 0 3
+INSERT 0 6
+
+-------------------- Query 1: -----------------------------------
+
+SET
+psql:q1.sql:3: NOTICE:  table "q1" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q1.sql:21: NOTICE:  view "total" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:32: NOTICE:  view "sum_concert" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:43: NOTICE:  view "zeroes" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:51: NOTICE:  view "zero_total" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:60: NOTICE:  view "unioned_total" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:68: NOTICE:  view "all_seats" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:82: NOTICE:  view "sold" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:93: NOTICE:  view "sold_venue" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:104: NOTICE:  view "zero_percentage" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:115: NOTICE:  view "percentage" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:125: NOTICE:  view "unioned_percentages" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q1.sql:136: NOTICE:  view "all_info" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 7
+             concert_name              |  concert_datetime   |      venue       | total_value |  percentage_sold
+---------------------------------------+---------------------+------------------+-------------+--------------------
+ Ron Sexsmith                          | 2022-12-03 19:30:00 | Massey Hall      |         130 |                  4
+ Womens Blues Review                   | 2022-11-25 20:00:00 | Massey Hall      |         275 |                  8
+ Mariah Carey - Merry Christmas to all | 2022-12-09 20:00:00 | ScotiaBank Arena |         986 | 3.3333333333333335
+ Mariah Carey - Merry Christmas to all | 2022-12-11 20:00:00 | ScotiaBank Arena |         388 |  6.666666666666667
+ TSO - Elf in Concert                  | 2022-12-09 19:30:00 | Roy Thomson Hall |           0 |                  0
+ TSO - Elf in Concert                  | 2022-12-10 14:30:00 | Roy Thomson Hall |           0 |                  0
+ TSO - Elf in Concert                  | 2022-12-10 19:30:00 | Roy Thomson Hall |         159 |  4.761904761904762
+(7 rows)
+
+
+-------------------- Query 2: -----------------------------------
+
+SET
+psql:q2.sql:3: NOTICE:  table "q2" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q2.sql:15: NOTICE:  view "owner_venue_count" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:25: NOTICE:  view "zero_owners" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:32: NOTICE:  view "zero_column" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:42: NOTICE:  view "all_owners" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+psql:q2.sql:48: NOTICE:  view "owner_all_info" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 2
+                     owner_name                      | owner_phone  | venues_owned
+-----------------------------------------------------+--------------+--------------
+ The Corporation of Massey Hall and Roy Thomson Hall | 416-872-4255 |            2
+ Maple Leaf Sports & Entertainment                   | 416-815-6000 |            1
+(2 rows)
+
+
+-------------------- Query 3: -----------------------------------
+
+SET
+psql:q3.sql:3: NOTICE:  table "q3" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q3.sql:11: NOTICE:  view "mobilitytrue" does not exist, skipping
+DROP VIEW
+psql:q3.sql:12: NOTICE:  view "mobilityall" does not exist, skipping
+DROP VIEW
+psql:q3.sql:13: NOTICE:  drop cascades to 2 other objects
+DETAIL:  drop cascades to view unioned_percentages
+drop cascades to view all_info
+DROP VIEW
+psql:q3.sql:14: NOTICE:  view "nameandpercentage" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 3
+    venue_name    |     percentage
+------------------+--------------------
+ Massey Hall      |                 24
+ Roy Thomson Hall |                  0
+ ScotiaBank Arena | 33.333333333333336
+(3 rows)
+
+
+-------------------- Query 4: -----------------------------------
+
+SET
+psql:q4.sql:3: NOTICE:  table "q4" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q4.sql:10: NOTICE:  view "nameandquantity" does not exist, skipping
+DROP VIEW
+psql:q4.sql:11: NOTICE:  view "nothighest" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 1
+ username
+----------
+ cristonc
+(1 row)
